@@ -14,7 +14,7 @@
             <h1 class="text-2xl font-extrabold text-indigo-700">Profit Pilot</h1>
             <nav class="space-x-4">
                 <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-150">Home</a>
-                <a href="#features" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-150">Features</a>
+                <a href="#dashboard" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-150">Dashboard</a>
                 <a href="#about" class="bg-indigo-600 text-white py-1 px-3 rounded hover:bg-indigo-700 transition duration-150">Contact Us</a>
             </nav>
         </div>
@@ -22,43 +22,67 @@
 
     <main class="grow">
         
-        <section class="bg-indigo-600 text-white py-20 md:py-32 mb-16 shadow-inner" id="about">
+        <section class="bg-indigo-600 text-white py-2 md:py-10 mb-16 shadow-inner" id="about">
             <div class="container mx-auto text-center px-4">
                 <h2 class="text-5xl md:text-6xl font-black mb-4 leading-tight">
-                    Welcome to the <span class="text-yellow-300">Future of Sales</span>.
+                    Welcome back, <span class="text-yellow-300"> Extra Fries</span>!
                 </h2>
                 <p class="text-xl md:text-2xl mb-8 font-light max-w-3xl mx-auto">
-                    Profit Pilot is your 24/7 AI Sales Accelerator. Get instant, data-driven answers that close deals faster and smarter.
+                    Your dashboard is updated with the latest insights and new metrics. Check the data below or ask Profit Pilot any detailed questions you have.
                 </p>
-                <button class="bg-green-400 hover:bg-green-500 text-indigo-900 font-extrabold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 text-lg">
-                    Learn How We Did It
+                <button id="open-chatbot-button" class="bg-green-400 hover:bg-green-500 text-indigo-900 font-extrabold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 text-lg">
+                    View Dashboard
                 </button>
             </div>
         </section>
 
-        <section id="features" class="container mx-auto p-8 pt-0">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Key Features</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <section id="dashboard" class="container mx-auto p-10 pt-1">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Q3 Sales Performance Dashboard</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 
-                <div class="bg-white p-8 rounded-xl shadow-2xl hover:shadow-indigo-300/50 transition duration-300 transform hover:-translate-y-1 border-t-4 border-indigo-500">
-                    <span class="text-5xl text-indigo-500 mb-4 inline-block">⚡</span>
-                    <h3 class="text-2xl font-bold mb-2 text-indigo-700">Instant Access</h3>
-                    <p class="text-gray-600">No more spending time pulling up reports or waiting for emails.</p>
-                </div>
-                
-                <div class="bg-white p-8 rounded-xl shadow-2xl hover:shadow-indigo-300/50 transition duration-300 transform hover:-translate-y-1 border-t-4 border-indigo-500">
-                    <span class="text-5xl text-indigo-500 mb-4 inline-block">📈</span>
-                    <h3 class="text-2xl font-bold mb-2 text-indigo-700">Data Retrieval</h3>
-                    <p class="text-gray-600">Connects to your existing database for accurate, real-time information.</p>
+                <div class="lg:col-span-2 bg-white p-8 rounded-xl shadow-xl border-b-4 border-violet-600">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-4">Total Quarterly Revenue</h3>
+                    <div class="flex items-center justify-between">
+                        <p class="text-6xl font-extrabold text-indigo-700">$14.2M</p>
+                        <div class="text-right">
+                            <p class="text-green-500 text-2xl font-bold">+6.4%</p>
+                            <p class="text-gray-500 text-sm">vs. Last Quarter</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-500 text-sm mt-4">Ask the chatbot: "What was the highest revenue opportunity last month?"</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow-2xl hover:shadow-indigo-300/50 transition duration-300 transform hover:-translate-y-1 border-t-4 border-indigo-500">
-                    <span class="text-5xl text-indigo-500 mb-4 inline-block">🔗</span>
-                    <h3 class="text-2xl font-bold mb-2 text-indigo-700">Easy Integration</h3>
-                    <p class="text-gray-600">Seamless setup guaranteed. Plug the agent into any website with a single code snippet.</p>
+                <div class="bg-white p-6 rounded-xl shadow-xl border-b-4 border-blue-600">
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">New Customers</h3>
+                    <p class="text-4xl font-extrabold text-indigo-700">1,280</p>
+                    <div class="mt-4 flex justify-between text-sm">
+                        <p class="text-gray-500">Churn Rate:</p>
+                        <p class="font-bold text-red-500">-2.1%</p>
+                    </div>
                 </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-yellow-500">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-2">Total Pipeline Value</h3>
+                    <p class="text-3xl font-bold text-yellow-600">$4.8M</p>
+                    <p class="text-gray-500 text-sm mt-2">55 open deals</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-green-500">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-2">Average Deal Size</h3>
+                    <p class="text-3xl font-bold text-green-600">$11,050</p>
+                    <p class="text-gray-500 text-sm mt-2">Up 3.2% from Q2</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-pink-500">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-2">Best Performing Region</h3>
+                    <p class="text-3xl font-bold text-pink-600">West Coast</p>
+                    <p class="text-gray-500 text-sm mt-2">Highest QBR: 112%</p>
+                </div>
+
             </div>
         </section>
+
     </main>
 
     <footer class="bg-gray-800 text-white text-center p-8 mt-auto">
@@ -67,16 +91,19 @@
     
     <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
     <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    
     <df-messenger
+    id="my-chatbot"
     location="us-central1"
     project-id="onboarding-group2"
     agent-id="68b12fc6-b366-4823-9d65-f7b1cfd7d847"
     language-code="en"
     max-query-length="-1">
     <df-messenger-chat-bubble
-        chat-title="Copilot">
+        chat-title="Profit Pilot">
     </df-messenger-chat-bubble>
     </df-messenger>
+    
     <style>
     df-messenger {
         z-index: 999;
@@ -90,6 +117,44 @@
         right: 16px;
     }
     </style>
+
+    <script>
+        // CRITICAL FIX: Use ID to access the component easily.
+        const dfMessenger = document.getElementById('my-chatbot');
+        const openButton = document.getElementById('open-chatbot-button');
+        
+        if (dfMessenger) {
+            const openChat = () => {
+                const chatElement = dfMessenger.shadowRoot.querySelector('df-messenger-chat');
+                
+                if (chatElement) {
+                    // Attach close/clear listener
+                    chatElement.addEventListener('df-messenger-chat-closed', function() {
+                        dfMessenger.sendTextRequest('clear-session'); 
+                    });
+                    
+                    // Attach click listener to button
+                    if (openButton) {
+                        openButton.addEventListener('click', function() {
+                            const isOpen = chatElement.getAttribute('opened') === 'true';
+                            if (!isOpen) {
+                                chatElement.setAttribute('opened', 'true');
+                            }
+                        });
+                    }
+                    
+                    // Once found and set up, disconnect the observer
+                    observer.disconnect();
+                }
+            };
+
+            // Use a MutationObserver to reliably wait for the internal shadow DOM to render
+            const observer = new MutationObserver(openChat);
+            
+            // Start observing the df-messenger element for changes (meaning it's loaded)
+            observer.observe(dfMessenger, { childList: true, subtree: true });
+        }
+    </script>
 
 </body>
 </html>
